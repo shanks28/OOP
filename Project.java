@@ -12,6 +12,7 @@ public class Project {
     {
         File file=new File("D:\\JAVA\\Programs in JAVA\\src\\Project1\\movies.txt");
         Scanner scanner=new Scanner(file);
+        Scanner scanner1=new Scanner(System.in);
         int movie=(int)(Math.random()*25);
         System.out.println("the randon number picked="+movie);
         int count=1;
@@ -35,6 +36,15 @@ public class Project {
         String S2=S1;
         S2=S2.replaceAll("[a-zA-Z]","_");
         System.out.println(S2);
+        System.out.println("Guess a letter");
+        String input=scanner1.next();
+        if(S1.contains(input))
+        {
+            System.out.println("the letter you have entered is present in the random word");
+        }
+        else {
+            System.out.println("The letter you have entered is not present in the random word");
+        }
 
         //String line= Files.readAllLines(Path.of("D:\\JAVA\\Programs in JAVA\\src\\Project1\\movies.txt").getFileName());
         ///int counter=0;
